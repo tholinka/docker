@@ -4,7 +4,8 @@ version="2.1.5.0-2"
 tag="runeliteplus:$version"
 
 # build - should generally be all cached so it's quick
-docker build -f Dockerfile -t $tag --build-arg version=$version .
+# also we don't need a build context, since we volume mount at run time
+docker build -f Dockerfile -t $tag --build-arg version=$version ../empty-context
 
 # setup X11
 XSOCK=/tmp/.X11-unix

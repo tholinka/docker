@@ -12,7 +12,7 @@ RUN chmod 755 RuneLitePlus.AppImage
 RUN ./RuneLitePlus.AppImage --appimage-extract
 
 # run the extracted AppImage
-FROM debian:latest
+FROM debian:buster-slim
 
 WORKDIR /usr/src/app
 
