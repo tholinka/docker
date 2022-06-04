@@ -89,8 +89,8 @@ jobs:
         with:
           context: docker-webnut
           push: ${{ github.event_name != 'pull_request' }}
-          # all platforms qemu / buildx supports right now
-          platforms: linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/amd64/v4,linux/arm64,linux/riscv64,linux/ppc64le,linux/s390x,linux/386,linux/mips64le,linux/mips64,linux/arm/v7,linux/arm/v6
+          # all platforms python alpine supports
+          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
           tags: |
             ${{ env.WEBNUT_IMAGE_NAME }}:1.0
             ${{ env.WEBNUT_IMAGE_NAME }}:1
