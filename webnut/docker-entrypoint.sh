@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 set -xe
 
 upshost="${UPS_HOST:-127.0.0.1}"
